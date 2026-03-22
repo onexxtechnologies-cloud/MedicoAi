@@ -1,0 +1,202 @@
+.step-guide {
+    padding: 100px 40px;
+    background: linear-gradient(180deg, #eef5f9 0%, #f5faf7 50%, #eef5f9 100%);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    /* Seamless transition fade - Sarvam AI style */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.steps-row {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: nowrap; /* Force one row on desktop */
+}
+
+.step-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 32px 14px 24px;
+    flex: 1; /* All cards take equal space */
+    min-width: 0; /* Allow shrinking */
+    max-width: 260px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(34, 197, 94, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+}
+
+.step-number {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 50% !important;
+    background: rgba(42, 157, 143, 0.12) !important;
+    border: 2px solid rgba(42, 157, 143, 0.2) !important;
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.4rem !important;
+    font-weight: 800 !important;
+    color: var(--teal) !important;
+    margin: 0 auto 16px !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+    flex-shrink: 0 !important;
+}
+
+.step-number span {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: normal !important;
+    text-align: center !important;
+}
+
+@media (max-width: 480px) {
+    .step-number {
+        width: 46px;
+        height: 46px;
+        font-size: 1.2rem;
+    }
+}
+
+.step-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 12px;
+}
+
+.step-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.step-desc {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+}
+
+.step-arrow {
+    width: 45px;
+    height: 30px;
+    flex-shrink: 0;
+    align-self: center;
+    filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.4));
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.step-arrow:hover {
+    filter: drop-shadow(0 0 12px rgba(34, 197, 94, 0.6));
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.step-arrow svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Reveal animation */
+.step-card.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.step-card.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+    .steps-row {
+        flex-direction: column;
+        gap: 0px;
+        /* Reduced gap since cards handle padding */
+    }
+
+    .step-arrow {
+        transform: rotate(90deg);
+        margin: -10px auto;
+        opacity: 0.5;
+        z-index: 2;
+    }
+
+    .step-card {
+        width: 100%;
+        max-width: 320px;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 32px 24px;
+        margin: 0 auto;
+        box-shadow: none;
+        border: none; /* Remove all borders in stack */
+        background: transparent;
+        border-radius: 0;
+    }
+
+    .step-card:first-child {
+        border-radius: var(--radius) var(--radius) 0 0;
+    }
+
+    .step-card:last-child {
+        border-radius: 0 0 var(--radius) var(--radius);
+    }
+
+    .step-number {
+        margin: 0 auto 12px;
+    }
+
+    .step-title {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .step-icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 16px;
+    }
+
+    .step-desc {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .step-guide {
+        padding: 50px 20px;
+    }
+}

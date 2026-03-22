@@ -1,0 +1,53 @@
+/* ========== RESET & BASE ========== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background: #f0f7f4;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --green-light: #d4edda;
+    --green-mid: #52b788;
+    --green-dark: #2d6a4f;
+    --blue-light: #d0e8f7;
+    --blue-mid: #4a90d9;
+    --blue-dark: #1a4a7a;
+    --teal: #2a9d8f;
+
+    --text-dark: #1a2e3b;
+    --text-mid: #3a5a6e;
+    --text-light: #6b8fa0;
+
+    --background-off-white: #f5faf7;
+
+    --shadow-soft: 0 4px 24px rgba(42, 157, 143, 0.1);
+    --shadow-card: 0 8px 32px rgba(42, 157, 143, 0.12);
+
+    --radius-pill: 100px;
+    --radius-card: 16px;
+    --radius-sm: 10px;
+    --radius: 16px;
+
+    --glass-bg: rgba(255, 255, 255, 0.55);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --blue-mid-rgb: 74, 144, 226;
+}
