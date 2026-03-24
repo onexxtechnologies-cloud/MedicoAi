@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhyChooseUs from './components/WhyChooseUs';
 import StepGuide from './components/StepGuide';
+import Benefits from './components/Benefits';
 import PatientAnalysis from './components/PatientAnalysis';
 import Blogs from './components/Blogs';
 import BlogDetail from './components/BlogDetail';
@@ -20,6 +21,7 @@ function Home() {
         <>
             <Hero />
             <WhyChooseUs />
+            <Benefits />
             <StepGuide />
             <PatientAnalysis />
             <Blogs />

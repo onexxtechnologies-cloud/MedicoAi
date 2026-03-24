@@ -1,0 +1,185 @@
+.benefits-section {
+    padding: 100px 20px;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefits-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.benefits-header {
+    text-align: center;
+    margin-bottom: 80px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.benefits-header.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-tag {
+    font-family: 'Outfit', sans-serif;
+    display: inline-block;
+    background: rgba(34, 197, 94, 0.08);
+    color: #059669;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #1a2e3b;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    color: #64748b;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 20px 0;
+}
+
+.benefit-card {
+    background: #ffffff;
+    border-radius: 40px;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity: 0;
+    transform: translateY(40px);
+    position: relative;
+    overflow: hidden;
+    min-height: 480px;
+}
+
+/* The soft bottom glow - Sarvam AI style */
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    right: -40px;
+    height: 180px;
+    background: linear-gradient(135deg, rgba(74, 143, 217, 0.414) 0%, rgba(82, 183, 136, 0.485) 100%);
+    filter: blur(40px);
+    z-index: 0;
+    transition: all 0.6s ease;
+    border-radius: 50%;
+}
+
+.benefit-card:hover::before {
+    height: 220px;
+    background: linear-gradient(135deg, rgba(74, 144, 217, 0.25) 0%, rgba(82, 183, 136, 0.25) 100%);
+    filter: blur(50px);
+}
+
+.benefit-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.benefit-card:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.benefit-card:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.benefit-card:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.benefit-image-wrapper {
+    width: 220px;
+    height: 200px;
+    margin-bottom: 24px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.6s ease;
+}
+
+.benefit-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.benefit-card:hover .benefit-image-wrapper {
+    transform: scale(1.05);
+}
+
+.benefit-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    color: #1a2e3b;
+    margin-bottom: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+    position: relative;
+    z-index: 1;
+}
+
+.benefit-desc {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 1200px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-card {
+        min-height: auto;
+        padding: 40px 24px;
+    }
+}
