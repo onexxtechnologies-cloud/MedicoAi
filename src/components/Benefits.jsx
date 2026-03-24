@@ -50,7 +50,7 @@ function Benefits() {
         <section className="benefits-section" id="benefits">
             <div className="benefits-container">
                 <div className="benefits-header">
-                    <span className="section-tag">Why Choose Medico AI?</span>
+                    <span className="section-tag">Benefits of Medico AI</span>
                     <h2 className="section-title">Revolutionizing Your Health Journey</h2>
                     <p className="section-subtitle">
                         Experience the next generation of medical intelligence with benefits designed to put you back in control of your well-being.
@@ -58,9 +58,9 @@ function Benefits() {
                 </div>
                 <div className="benefits-grid">
                     {benefits.map((benefit, index) => (
-                        <div 
-                            key={index} 
-                            className="benefit-card reveal" 
+                        <div
+                            key={index}
+                            className="benefit-card reveal"
                             ref={el => cardsRef.current[index] = el}
                         >
                             <div className="benefit-image-wrapper">
