@@ -50,6 +50,8 @@ function FAQ() {
                 <div className="bg-blob blob-3"></div>
             </div>
 
+
+
             <div className="section-header">
                 <h2 className="section-title">Common Questions</h2>
                 <p className="section-subtitle">Find answers to frequently asked questions about our AI solutions</p>

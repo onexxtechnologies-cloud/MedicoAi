@@ -15,7 +15,7 @@ function Navbar() {
             setScrolled(window.scrollY > 50);
 
             if (location.pathname === '/') {
-                const sections = ['hero', 'why-choose-us', 'step-guide', 'blogs', 'faq'];
+                const sections = ['hero', 'why-choose-us', 'step-guide', 'blogs', 'reviews', 'faq'];
                 let found = false;
                 for (const section of sections) {
                     const element = document.getElementById(section);
@@ -95,9 +95,13 @@ function Navbar() {
                         <Link to="/blogs"
                             className={`nav-link ${location.pathname === '/blogs' ? 'active' : ''}`}
                             onClick={() => setIsMenuOpen(false)}>Blogs</Link>
+                        <a href="#reviews"
+                            className={`nav-link ${activeSection === 'reviews' ? 'active' : ''}`}
+                            onClick={(e) => scrollTo(e, 'reviews')}>Reviews</a>
                         <a href="#faq"
                             className={`nav-link ${activeSection === 'faq' ? 'active' : ''}`}
                             onClick={(e) => scrollTo(e, 'faq')}>FAQ</a>
+
                     </div>
 
                     <Link to="/contact" 
@@ -124,7 +128,9 @@ function Navbar() {
                     <Link to="/features" className={`mobile-nav-link ${location.pathname === '/features' ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>Features</Link>
                     <Link to="/how-to-use" className={`mobile-nav-link ${location.pathname === '/how-to-use' ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>How to Use</Link>
                     <Link to="/blogs" className={`mobile-nav-link ${location.pathname === '/blogs' ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>Blogs</Link>
+                    <a href="#reviews" className={`mobile-nav-link ${activeSection === 'reviews' ? 'active' : ''}`} onClick={(e) => scrollTo(e, 'reviews')}>Reviews</a>
                     <a href="#faq" className={`mobile-nav-link ${activeSection === 'faq' ? 'active' : ''}`} onClick={(e) => scrollTo(e, 'faq')}>FAQ</a>
+
                     <Link to="/contact" 
                         className="mobile-nav-cta" 
                         onClick={() => setIsMenuOpen(false)}>Contact Us</Link>

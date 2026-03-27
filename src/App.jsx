@@ -13,6 +13,8 @@ import PatientPortal from './components/PatientPortal';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import HowToUse from './components/HowToUse';
+import Reviews from './components/Reviews';
+
 import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
 
@@ -25,7 +27,9 @@ function Home() {
             <StepGuide />
             <PatientAnalysis />
             <Blogs />
+            <Reviews />
             <FAQ />
+
         </>
     );
 }

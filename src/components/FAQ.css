@@ -19,13 +19,14 @@
     z-index: 0;
 }
 
-.bg-blob {
+.faq .bg-blob {
     position: absolute;
     z-index: 0;
 }
 
+
 /* Subtle lavender wash — upper left atmosphere */
-.blob-1 {
+.faq .blob-1 {
     top: 5%;
     left: -8%;
     width: 500px;
@@ -35,27 +36,42 @@
     border-radius: 50%;
 }
 
+
 /* Rainbow arc band — blue top, green bottom */
-.blob-2 {
-    bottom: -1100px;
+.faq .blob-2 {
+    bottom: -1200px;
     left: 50%;
     transform: translateX(-50%);
     width: 160%;
-    height: 1400px;
+    height: 1600px; 
     background: linear-gradient(
         to bottom,
-        rgba(59, 130, 246, 0.45) 0%,
-        rgba(14, 165, 233, 0.4) 8%,
-        rgba(16, 185, 129, 0.5) 16%,
-        rgba(52, 211, 153, 0.55) 25%,
-        rgba(52, 211, 153, 0.5) 100%
+        rgba(59, 130, 246, 0.75) 0%,    /* Vibrant Blue top */
+        rgba(52, 211, 153, 0.7) 30%,    /* Sharp transition to Green */
+        rgba(16, 185, 129, 0.6) 100%
     );
-    filter: blur(25px);
+
+    filter: blur(50px);
     border-radius: 50%;
+    position: absolute;
+    z-index: -1;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Faint green accent — bottom left reinforcement */
-.blob-3 {
+.faq .blob-3 {
     bottom: 0%;
     left: 10%;
     width: 300px;
@@ -64,6 +80,7 @@
     filter: blur(30px);
     border-radius: 50%;
 }
+
 
 @keyframes pulse-glow {
     0% {
@@ -199,11 +216,12 @@
     transform: translateY(0);
 }
 
-.section-header {
+.faq .section-header {
     position: relative;
     z-index: 5;
     margin-bottom: 60px;
 }
+
 
 @media (max-width: 768px) {
     .faq {
