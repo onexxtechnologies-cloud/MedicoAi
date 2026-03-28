@@ -17,6 +17,7 @@ import Reviews from './components/Reviews';
 
 import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
+import PricingPage from './pages/PricingPage';
 
 function Home() {
     return (
@@ -46,6 +47,7 @@ function App() {
                 <Route path="/blogs" element={<BlogPage />} />
                 <Route path="/blog/:id" element={<BlogDetail />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/pricing" element={<PricingPage />} />
             </Routes>
             <Footer />
         </Router>

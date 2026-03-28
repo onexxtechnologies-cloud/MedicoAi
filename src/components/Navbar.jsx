@@ -101,6 +101,9 @@ function Navbar() {
                         <a href="#faq"
                             className={`nav-link ${activeSection === 'faq' ? 'active' : ''}`}
                             onClick={(e) => scrollTo(e, 'faq')}>FAQ</a>
+                        <Link to="/pricing"
+                            className={`nav-link ${location.pathname === '/pricing' ? 'active' : ''}`}
+                            onClick={() => setIsMenuOpen(false)}>Pricing</Link>
 
                     </div>
 
@@ -130,6 +133,7 @@ function Navbar() {
                     <Link to="/blogs" className={`mobile-nav-link ${location.pathname === '/blogs' ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>Blogs</Link>
                     <a href="#reviews" className={`mobile-nav-link ${activeSection === 'reviews' ? 'active' : ''}`} onClick={(e) => scrollTo(e, 'reviews')}>Reviews</a>
                     <a href="#faq" className={`mobile-nav-link ${activeSection === 'faq' ? 'active' : ''}`} onClick={(e) => scrollTo(e, 'faq')}>FAQ</a>
+                    <Link to="/pricing" className={`mobile-nav-link ${location.pathname === '/pricing' ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>Pricing</Link>
 
                     <Link to="/contact" 
                         className="mobile-nav-cta" 
