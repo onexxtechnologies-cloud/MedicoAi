@@ -12,9 +12,9 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--text-dark);
-    background: #f0f7f4;
+    background: var(--slate-50);
     overflow-x: hidden;
     line-height: 1.6;
 }
@@ -25,29 +25,48 @@ a {
 }
 
 :root {
-    --green-light: #d4edda;
-    --green-mid: #52b788;
-    --green-dark: #2d6a4f;
-    --blue-light: #d0e8f7;
-    --blue-mid: #4a90d9;
-    --blue-dark: #1a4a7a;
-    --teal: #2a9d8f;
+    /* Premium Emerald Palette */
+    --emerald-50: #ecfdf5;
+    --emerald-100: #d1fae5;
+    --emerald-500: #10b981;
+    --emerald-600: #059669;
+    --emerald-700: #047857;
+    --emerald-900: #064e3b;
 
-    --text-dark: #1a2e3b;
-    --text-mid: #3a5a6e;
-    --text-light: #6b8fa0;
+    /* Professional Slate Palette */
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-400: #94a3b8;
+    --slate-500: #64748b;
+    --slate-600: #475569;
+    --slate-900: #0f172a;
 
-    --background-off-white: #f5faf7;
+    /* Functional Variables */
+    --primary: var(--emerald-600);
+    --primary-dark: var(--emerald-900);
+    --primary-light: var(--emerald-100);
 
-    --shadow-soft: 0 4px 24px rgba(42, 157, 143, 0.1);
-    --shadow-card: 0 8px 32px rgba(42, 157, 143, 0.12);
+    --secondary: var(--slate-600);
+    --secondary-dark: var(--slate-900);
+    --secondary-light: var(--slate-100);
 
-    --radius-pill: 100px;
-    --radius-card: 16px;
-    --radius-sm: 10px;
-    --radius: 16px;
+    --text-dark: var(--slate-900);
+    --text-mid: var(--slate-600);
+    --text-light: var(--slate-400);
 
-    --glass-bg: rgba(255, 255, 255, 0.55);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --blue-mid-rgb: 74, 144, 226;
+    /* Shadows & Glassmorphism */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-blur: blur(12px);
+
+    /* Radii */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
 }
